@@ -2,13 +2,15 @@
 {
   "modid": "grassblades",
   "name": "Grass Blades",
-  "description": "Made for OnmyojiOmn. Now all blocks that usually break instantly (e.g grass or redstone dust) won'be destroyed by swords",
+  "description": "Now all blocks that usually break instantly (e.g grass or redstone dust) won't be destroyed by swords. Sneaking disables the effect.
+
+Originally made for OnmyojiOmn.",
   "version": "1.0",
   "mcversion": "1.7.10",
   "url": "",
   "updateUrl": "",
   "authorList": ["goldenapple"],
-  "credits": "",
+  "credits": "OnmyojiOmn fo the original idea",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

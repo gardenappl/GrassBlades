@@ -22,8 +22,7 @@ group= "com.goldenapple.grassblades" // http://maven.apache.org/guides/mini/guid
 archivesBaseName = "GrassBlades"
 
 minecraft {
-    version = "1.7.10-10.13.2.1230"
-    assetDir = "eclipse/assets"
+    version = "1.7.10-10.13.2.1291"
 }
 
 dependencies {

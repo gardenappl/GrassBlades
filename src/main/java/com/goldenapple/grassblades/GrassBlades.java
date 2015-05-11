@@ -22,11 +22,13 @@ public class GrassBlades{
     @SubscribeEvent
     public void onPlayerStartBreaking(PlayerEvent.BreakSpeed event){ //every time a player starts breaking a block
         if(event.entityPlayer.getCurrentEquippedItem() != null){ //if the player has an item equipped
-            if(event.entityPlayer.getCurrentEquippedItem().getItem() instanceof ItemSword) { //if the item is a sword
-                World world = event.entityPlayer.worldObj;
-                Block block = world.getBlock(event.x, event.y, event.z);
-                if(block.getBlockHardness(world, event.x, event.y, event.z) == 0.0F){
-                    event.newSpeed = -1.0F;
+            if(!event.entityPlayer.isSneaking()) { //if the player isn't sneaking
+                if (event.entityPlayer.getCurrentEquippedItem().getItem() instanceof ItemSword) { //if the player holds a sword
+                    World world = event.entityPlayer.worldObj;
+                    Block block = world.getBlock(event.x, event.y, event.z);
+                    if (block.getBlockHardness(world, event.x, event.y, event.z) == 0.0F) { //if the block can be broken instantly
+                        event.newSpeed = -1.0F; //make it unbreakable
+                    }
                 }
             }
         }
